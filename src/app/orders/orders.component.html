@@ -1,0 +1,32 @@
+<div class="container mt-5">
+     
+    <table class="table table-striped">
+      <thead>
+          <tr>
+            <th>Order No.</th>
+            <th>Due Date</th>
+            <th>Buyer Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Amount</th>
+            <th>    <button type="submit" class="float-right btn-success">New</button>
+            </th>
+            <th></th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of Orders">
+          <td>{{ order.orderNumber }}</td>
+          <td>{{ order.orderDueDate }}</td>
+          <td>{{ order.buyerName }}</td>
+          <td>{{ order.address }}</td>
+          <td>{{ order.phone }}</td>
+          <td>{{ order.total }}</td>
+          <td><button type="submit" class="btn-primary">edit</button></td>
+          <td><button type="submit" class="btn-danger">delete</button></td>
+
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
